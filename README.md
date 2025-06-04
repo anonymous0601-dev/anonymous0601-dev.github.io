@@ -154,31 +154,3 @@ Therefore, we use **GPT-4o** as a content rewriter to fix the errors while keepi
 The last step is to verify the correctness of generated responses. We leverage **GPT-3.5-Turbo** to compare the generated content with groundtruth from the original dataset (prompt [here](assets/prompts/4.verify.txt)).
 
 
-
-## Ongoing
-
-- Dataset Scale Up:
-  - [ ] More VQA datasets (close-end)
-  - [ ] Data with less thinking to avoid over-reasoning
-
-- Model Training:
-  - [ ] SFT on long CoT data (7B, 32B models)
-  - [ ] GRPO on closed-end VQA data (7B, 32B models)
-
-
-## 📝 Contributors
-[Hardy Chen*](https://g-h-chen.github.io/), [Haoqin Tu*](https://www.haqtu.me/)
-
-Advising: [Yuyin Zhou](https://yuyinzhou.github.io/), [Cihang Xie](https://cihangxie.github.io/)
-If you find our data useful, please consider citing our work! We are [VLAA](https://ucsc-vlaa.github.io/) from University of California, Santa Cruz.
-
-```
-@misc{vl-thinking2025,
-  title={VL-Thinking: An R1-Derived Visual Instruction Tuning Dataset for Thinkable LVLMs},
-  author={Hardy Chen and Haoqin Tu and Hui Liu and Xianfeng Tang and Yuyin Zhou and Cihang Xie},
-  year = {2025},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/UCSC-VLAA/VL-Thinking}},
-}
-```
