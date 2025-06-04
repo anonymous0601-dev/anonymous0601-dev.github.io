@@ -1,6 +1,6 @@
 
 
-# VL-Thinking: An R1-Derived Visual Instruction Tuning Dataset for Thinkable LVLMs
+# Advancing Metallic Surface Defect Detection via Anomaly-Guided Pretraining on a Large Industrial Dataset
 
 
 ## 📚 Dataset Card
