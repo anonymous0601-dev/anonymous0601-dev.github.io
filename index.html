@@ -1,9 +1,572 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My GitHub Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLAA-Thinking</title>
+
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./resources/thinking.webp">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
-    <h1>Hello AGSSP!</h1>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SFT or RL? An Early Investigation into Training R1-Like Reasoning Large Vision-Language Models </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <span><a href="https://g-h-chen.github.io/">Hardy Chen</a></span><sup>2*</sup>,</span>
+            <span class="author-block">
+              <span><a href="https://www.haqtu.me/">Haoqin Tu</a></span><sup>1*</sup>,</span>
+
+            <span class="author-block">
+              <span><a href="https://fairyfali.github.io/">Fali Wang</a></span><sup>4</sup>,</span>
+            </span>
+            <span class="author-block">
+              <span><a href="https://layneins.github.io/">Hui Liu</a></span><sup>3</sup>,</span>
+            </span>
+
+            <span class="author-block">
+              <span><a href="https://xta.ng/">Xianfeng Tang</a></span><sup>3</sup>,</span>
+            </span>
+            
+            <span class="author-block">
+              <span><a href="https://xinyadu.github.io/">Xinya Du</a></span><sup>2</sup>,</span>
+            </span>
+
+            <span class="author-block">
+              <span><a href="https://yuyinzhou.github.io/">Yuyin Zhou</a></span><sup>1</sup>,</span>
+            </span>
+            <span class="author-block">
+              <span><a href="https://cihangxie.github.io/">Cihang Xie</a></span><sup>1</sup></span>
+            </span>
+          </div>
+          <br/>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>UC Santa Cruz,</span>
+            <span class="author-block"><sup>2</sup>UT Dallas,</span>
+            <span class="author-block"><sup>3</sup>Amazon Research,</span>
+            <span class="author-block"><sup>4</sup>The Pennsylvania State University</span>
+            <!-- <span class="author-block"><sup>3</sup>JHU, </span> -->
+            
+          </div>
+
+          <div class="column has-text-centered">
+
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2504.11468" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa-solidassasas fa-face-smiling-hands"></i>
+                    <img src="./resources/ar.svg" alt="img" style="width: 100%; height: 100%" /> 
+                  </span>
+                  <span>ArXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/UCSC-VLAA/VLAA-Thinking" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/UCSC-VLAA/VLAA-Thinking" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa-solidasasa fa-face-smiling-hands"></i>
+                   <!-- <img src="./resources/hg.svg" alt="img" style="width: 100%; height: 100%" />  -->
+                   <img src="./resources/thinking.webp" alt="img" style="width: 100%; height: 100%" /> 
+                  </span>
+                   <span>VLAA-Thinking Dataset</span>
+                  </a>
+                </span>    
+            </div>
+
+
+            <!-- second row -->
+            <div class="publication-links">
+              <!-- model Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/UCSC-VLAA/VLAA-Thinker-Qwen2.5VL-3B" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa-solidassasas fa-face-smiling-hands"></i>
+                    <img src="./resources/hg.svg" alt="img" style="width: 100%; height: 100%" /> 
+                  </span>
+                  <span><b>VLAA-Thinker-Qwen2.5-3B</b></span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/UCSC-VLAA/VLAA-Thinker-Qwen2.5VL-7B" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa-solidassasas fa-face-smiling-hands"></i>
+                    <img src="./resources/hg.svg" alt="img" style="width: 100%; height: 100%" /> 
+                  </span>
+                  <span><b>VLAA-Thinker-Qwen2.5-7B</b></span>
+                </a>
+              </span>
+            </div>
+            
+            <!-- third row -->
+            <div class="publication-links">
+              <!-- model Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/UCSC-VLAA/VLAA-Thinker-Qwen2VL-2B" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa-solidassasas fa-face-smiling-hands"></i>
+                    <img src="./resources/hg.svg" alt="img" style="width: 100%; height: 100%" /> 
+                  </span>
+                  <span>VLAA-Thinker-Qwen2VL-2B</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/UCSC-VLAA/VLAA-Thinker-Qwen2VL-7B-Zero" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa-solidassasas fa-face-smiling-hands"></i>
+                    <img src="./resources/hg.svg" alt="img" style="width: 100%; height: 100%" /> 
+                  </span>
+                  <span>VLAA-Thinker-Qwen2VL-7B-Zero</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/UCSC-VLAA/VLAA-Thinker-Qwen2VL-7B" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa-solidassasas fa-face-smiling-hands"></i>
+                    <img src="./resources/hg.svg" alt="img" style="width: 100%; height: 100%" /> 
+                  </span>
+                  <span>VLAA-Thinker-Qwen2VL-7B</span>
+                </a>
+              </span>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="hero teaser">
+  <div class="container">
+    <div class="hero-body", style="text-align: center;">
+      <img src="./resources/recap_front.jpg" alt="alt text"
+                        style="width: 50%; object-fit: cover; max-width:50%;"></a>
+      <h2 class="subtitle has-text-centered">
+        Examples of the original caption and our recaption in DataComp-1B, and the word distributions.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="section">
+  <div class="container ">
+    <div class="hero-body">
+      <center><h2 class="title is-3">Demo</h2></center>
+  <iframe src="https://laos-y-hqedit.hf.space" frameborder="0" width="100%" height="1000"></iframe>
+</div>
+</div>
+</section> -->
+
+
+
+<!-- Abstract. -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This work revisits the dominant supervised fine-tuning (SFT) then reinforcement learning (RL) paradigm for training Large Vision-Language Models (LVLMs), and reveals a key finding: SFT can significantly undermine subsequent RL by inducing "pseudo reasoning paths" imitated from expert models. While these paths may resemble the native reasoning paths of RL models, they often involve prolonged, hesitant, less informative steps, and  incorrect reasoning. To systematically study this effect, we introduce VLAA-Thinking, a new multimodal dataset designed to support reasoning in LVLMs.  Constructed via a six-step pipeline involving captioning, reasoning distillation, answer rewrite and verification, VLAA-Thinking comprises high-quality, step-by-step visual reasoning traces for SFT, along with a more challenging RL split from the same data source. Using this dataset, we conduct extensive experiments comparing SFT, RL and their combinations.  Results show that while SFT helps models learn reasoning formats, it often locks aligned models into imitative, rigid reasoning modes that impede further learning. In contrast, building on the Group Relative Policy Optimization (GRPO) with a novel mixed reward module integrating both perception and cognition signals, our RL approach fosters more genuine, adaptive reasoning behavior. Notably, our model VLAA-Thinker, based on Qwen2.5VL 3B, achieves top-1 performance on <a href="https://huggingface.co/spaces/opencompass/Open_LMM_Reasoning_Leaderboard">Open LMM Reasoning Leaderboard</a> among 4B scale LVLMs, surpassing the previous state-of-the-art by 1.8%. We hope our findings provide valuable insights in developing reasoning-capable LVLMs and can inform future research in this area.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- / Abstract. -->
+
+
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">🏭 VLAA-Thinking Data Generation</h2>
+        <div class="content has-text-justified">
+          <center><img class="center" src="./assets/data_generation.png" width="100%"></center>
+          <!-- <p>
+            <strong style="font-weight: 900">Pipeline Overview.</strong>
+            We propose a four-step procedure for data generation: <b>Captioning</b>, <b>Visual-Language CoT Generation</b>, <b>Answer Rewriting</b> and <b>Answer Verification</b>.          
+          </p> -->
+          <p>
+            <strong style="font-weight: 900">Data generation pipeline.</strong>
+            We first generate initial reasoning traces by feeding detailed captions and visual questions into DeepSeek-R1.These outputs are then rewritten for improved fluency and verified for correctness using a GPT-based verifier. the resulting data is split into VLAA-Thinking-SFT and VLAA-Thinking-RL. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">📚 VLAA-Thinking Dataset Card</h2>
+    <!-- <p class="has-text-centered">The first version consists of samples from the following datasets:</p> -->
+    <br>
+    <div class="table-container">
+      <table class="table is-striped is-hoverable is-fullwidth">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Data Type</th>
+            <th># Original</th>
+            <th># Pipeline</th>
+            <th># Final SFT</th>
+            <th># Final RL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://huggingface.co/datasets/lmms-lab/LLaVA-OneVision-Data/tree/main/CLEVR-Math(MathV360K)">CLEVR_Math</a></td>
+            <td>Closed-end</td>
+            <td>35,000</td>
+            <td>28,018</td>
+            <td>5,923</td>
+            <td>2,000</td>
+          </tr>
+          <tr>
+            <td><a href="https://huggingface.co/datasets/lmms-lab/LLaVA-OneVision-Data/tree/main/geo170k(qa)">GeoQA170K</a></td>
+            <td>Closed-end</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>6,499</td>
+          </tr>
+          <tr>
+            <td><a href="https://huggingface.co/datasets/Math-PUMA/Math-PUMA_Data_Stage2/tree/main/Synthesis">Math PUMA</a></td>
+            <td>Closed-end</td>
+            <td>30,000</td>
+            <td>26,672</td>
+            <td>19,258</td>
+            <td>6,696</td>
+          </tr>
+          <tr>
+            <td><a href="https://huggingface.co/datasets/MMInstruction/ArxivQA?row=0">ArxivQA</a></td>
+            <td>Closed-end</td>
+            <td>54,399</td>
+            <td>51,348</td>
+            <td>34,604</td>
+            <td>1,000</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.docvqa.org/datasets">DocVQA</a></td>
+            <td>Closed-end</td>
+            <td>10,194</td>
+            <td>8,206</td>
+            <td>4,897</td>
+            <td>1,000</td>
+          </tr>
+          <tr>
+            <td><a href="https://vizwiz.org/tasks-and-datasets/vqa/">VizWiz</a></td>
+            <td>Closed-end</td>
+            <td>20,523</td>
+            <td>6,528</td>
+            <td>4,266</td>
+            <td>1,000</td>
+          </tr>
+          <tr>
+            <td><a href="https://huggingface.co/datasets/FreedomIntelligence/ALLaVA-4V/tree/main/allava_laion">ALLaVA-LAION</a></td>
+            <td>Open-end</td>
+            <td>47,066</td>
+            <td>18,123</td>
+            <td>10,496</td>
+            <td>3,000</td>
+          </tr>
+          <tr>
+            <td><a href="https://huggingface.co/datasets/Xkev/LLaVA-CoT-100k">LLaVA-CoT-COCO</a></td>
+            <td>Closed-end</td>
+            <td>3,000</td>
+            <td>3,000</td>
+            <td>8,727</td>
+            <td>2,000</td>
+          </tr>
+          <tr>
+            <td><a href="https://huggingface.co/datasets/Xkev/LLaVA-CoT-100k">LLaVA-CoT-VisualGenome</a></td>
+            <td>Closed-end</td>
+            <td>3,000</td>
+            <td>3,000</td>
+            <td>38,242</td>
+            <td>2,000</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td>Closed- &amp; Open-end</td>
+            <td>203,182</td>
+            <td>144,895</td>
+            <td>126,413</td>
+            <td>25,195</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- <p class="has-text-justified">
+      <b>Dataset Statistics.</b> These datasets cover questions from different domains (math, general) and questions of different types (close-ended, open-ended). 
+      For datasets with duplicated images, we select unique images for higher diversity. <b>More data are on the way</b>.
+    </p> -->
+    <p class="has-text-justified">
+      <strong>Data statistics of VLAA-Thinking</strong> We present the original volume of metadata (<span>#Original</span>), the data size after the distillation pipeline (<span>#Pipeline</span>), the size of sampled examples for SFT (<span>#Final SFT</span>) and RL (<span>#Final RL</span>), respectively. Note that we only use GeoQA170K with verifiable answers for the RL split.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+      <section class="section">
+        <div class="container">
+          <h2 class="title is-3 has-text-centered">Examples</h2>
+          <div class="tabs is-centered">
+            <ul>
+              <li class="is-active" onclick="showTab(event, 'pdf-a')"><a>CLEVR-MATH</a></li>
+              <li onclick="showTab(event, 'pdf-b')"><a>GeoQA</a></li>
+              <li onclick="showTab(event, 'pdf-c')"><a>Synthesis</a></li>
+              <li onclick="showTab(event, 'pdf-d')"><a>ArxivQA</a></li>
+              <li onclick="showTab(event, 'pdf-e')"><a>ALLaVA-LAION</a></li>
+            </ul>
+          </div>
+          <div class="content has-text-centered">
+            <img id="pdf-a" class="pdf-preview" src="./assets/examples/vl-thinking3.png" width="60%">
+            <img id="pdf-b" class="pdf-preview is-hidden" src="./assets/examples/vl-thinking1.png" width="60%">
+            <img id="pdf-c" class="pdf-preview is-hidden" src="./assets/examples/vl-thinking2.png" width="60%">
+            <img id="pdf-d" class="pdf-preview is-hidden" src="./assets/examples/vl-thinking4.png" width="60%">
+            <img id="pdf-e" class="pdf-preview is-hidden" src="./assets/examples/vl-thinking5.png" width="60%">
+          </div>
+        </div>
+      </section>
+      
+      <script>
+        function showTab(event, tabId) {
+          document.querySelectorAll('.pdf-preview').forEach(img => img.classList.add('is-hidden'));
+          document.getElementById(tabId).classList.remove('is-hidden');
+          
+          document.querySelectorAll('.tabs ul li').forEach(tab => tab.classList.remove('is-active'));
+          event.currentTarget.classList.add('is-active');
+        }
+      </script>
+      
+      <style>
+        .is-hidden {
+          display: none;
+        }
+        .tabs ul li a {
+          cursor: pointer;
+        }
+      </style>
+      
+
+            <!-- <section class="section">
+            <div class="container">
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                  <h2 class="title is-3">Acknowledge</h2>
+                  <div class="content has-text-justified">
+                    This work is partially supported by a gift from Adobe, TPU Research Cloud (TRC) program, Google Cloud Research Credits program, AWS Cloud Credit for Research program, Edinburgh International Data Facility (EIDF) and the Data-Driven Innovation Programme at the University of Edinburgh.
+                  </div>
+                </div>
+              </div>
+            </section> -->
+
+
+
+<!-- Teaser. -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">⚔️ SFT vs RL for Reasoning</h2>
+        
+        <h3 class="title is-3 has-text-left" style="font-size: 1.5rem; margin-top: 50px;;">Pseudo vs Native Reasoning</h3>
+
+        <div class="content has-text-justified">
+          <center><img class="center" src="./assets/teaser-vl-reasoner-v2.png" width="100%"></center>
+          <!-- <p>
+            <strong style="font-weight: 900">Pipeline Overview.</strong>
+            We propose a four-step procedure for data generation: <b>Captioning</b>, <b>Visual-Language CoT Generation</b>, <b>Answer Rewriting</b> and <b>Answer Verification</b>.         
+           </p> -->
+           <p>
+            <strong style="font-weight: 900">Examples from LVLMs trained with different strategies for reasoning.</strong>
+           </p>
+           <p>
+            <strong>Left</strong>: response from a model trained with SFT, showing 
+            <em>pseudo reasoning traces</em> and a number of <em>pseudo self-reflective cues</em> (i.e., aha-moments) imitated from R1.
+          </p>
+          <p>
+            <strong>Right</strong>: response from a model trained with RL (GRPO), showing 
+            <em>native reasoning ability</em> and <em>authentic aha-moments</em> emerged from RL training.
+          </p>
+          <p>
+            <span style="color: red;">Wrong reasoning steps</span> are colored red and 
+            <span style="background-color: yellow;">aha-moments</span> are highlighted.
+          </p>
+        </div>
+
+
+        <h3 class="title is-3 has-text-left" style="font-size: 1.5rem; margin-top: 60px;">SFT Performance</h3>
+
+        <div class="content has-text-justified">
+          <center><img class="center" src="./assets/sft_only.png" width="100%"></center>
+           <p>
+            <strong style="font-weight: 900">Delta percentage performance change</strong>
+            of different models trained with supervised fine-tuning (SFT) only. 
+           </p>
+
+        </div>
+        
+        <h3 class="title is-3 has-text-left" style="font-size: 1.5rem; margin-top: 60px;">SFT+GRPO vs GRPO Performance</h3>
+
+        <div class="content has-text-justified">
+          <center><img class="center" src="./assets/grpo_with_sft.png" width="100%"></center>
+          <!-- <p>
+            <strong style="font-weight: 900">Pipeline Overview.</strong>
+            We propose a four-step procedure for data generation: <b>Captioning</b>, <b>Visual-Language CoT Generation</b>, <b>Answer Rewriting</b> and <b>Answer Verification</b>.         
+           </p> -->
+           <p>
+            <strong style="font-weight: 900">Impact of SFT with 5K and 10K samples before GRPO.</strong>
+            SFT jeopardizes GRPO performance.
+           </p>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+<!-- / Teaser. -->
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">💡 GRPO with Mixed Reward</h2>
+
+
+        <h3 class="title is-3 has-text-left" style="font-size: 1.5rem; margin-top: 50px;">Mixed Reward Module</h3>
+        <div class="content has-text-justified">
+          <center><img class="center" src="./assets/mixed_reward.png" width="100%"></center>
+          <p>
+            <strong style="font-weight: 900">Mixed reward module.</strong>
+            The proposed framework comprises 2 reward formats (rule-based and open-ended) and 5 types of verifiable rewards (digit, MCQ, math, IoU and general reasoning).         
+          </p>
+        </div>
+
+
+        </style>
+        <h3 class="title is-3 has-text-left" style="font-size: 1.5rem; margin-top: 50px;;">Performance</h3>
+        <div class="content has-text-justified">
+          <center><img class="center" src="./assets/main_results.png" width="100%"></center>
+          <!-- <p>
+            <strong style="font-weight: 900">Pipeline Overview.</strong>
+            We propose a four-step procedure for data generation: <b>Captioning</b>, <b>Visual-Language CoT Generation</b>, <b>Answer Rewriting</b> and <b>Answer Verification</b>.          
+          </p> -->
+          <p>
+            <strong style="font-weight: 900">Benchmark performance.</strong>
+            Evaluation on 6 math reasoning benchmarks held by <a href="https://huggingface.co/spaces/opencompass/Open_LMM_Reasoning_Leaderboard">Open LMM Reasoning Leaderboard</a>. VLAA-Thinker models significantly outperform baselines and other models.
+          </p>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+            
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p class="has-text-justified">
+      We thank the Microsoft Accelerate Foundation Models Research Program for supporting our computing needs.
+    </p>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@misc{chen2025sftrlearlyinvestigation,
+  title={SFT or RL? An Early Investigation into Training R1-Like Reasoning Large Vision-Language Models}, 
+  author={Hardy Chen and Haoqin Tu and Fali Wang and Hui Liu and Xianfeng Tang and Xinya Du and Yuyin Zhou and Cihang Xie},
+  year={2025},
+  eprint={2504.11468},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2504.11468}, 
+}
+<!-- @misc{vl-thinking2025,
+    title={VL-Thinking: An R1-Derived Visual Instruction Tuning Dataset for Thinkable LVLMs},
+    author={Hardy Chen and Haoqin Tu and Hui Liu and Xianfeng Tang and Xinya Du and Yuyin Zhou and Cihang Xie},
+    year = {2025},
+    publisher = {GitHub},
+    journal = {GitHub repository},
+    howpublished = {\url{https://github.com/UCSC-VLAA/VL-Thinking}},
+    } -->
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Based on the following <a href="http://nerfies.github.io">template</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
