@@ -32,10 +32,10 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Advancing Metallic Surface Defect Detection via Anomaly-Guided Pretraining on a Large Industrial Dataset </h1>
           <div class="is-size-5 publication-authors">
-            
-            <span class="author-block">
-              <span><a href="https://g-h-chen.github.io/">Hardy Chen</a></span><sup>2*</sup>,</span>
             <!-- 
+            <span class="author-block">
+              <span><a href="#">Hardy Chen</a></span><sup>2*</sup>,</span>
+            
             <span class="author-block">
               <span><a href="https://www.haqtu.me/">Haoqin Tu</a></span><sup>1*</sup>,</span>
     
@@ -150,7 +150,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Pretrained models are commonly employed to improve finetuning performance in metallic surface defect detection, especially in data-scarce environments. However, models pretrained on ImageNet often underperform due to data distribution gaps and misaligned training objectives. To address this, we propose a novel method called Anomaly-Guided Self-Supervised Pretraining (AGSSP), which pretrains on a large industrial dataset containing 120,000 images. AGSSP adopts a two-stage framework: (1) anomaly map guided backbone pretraining, which integrates domain-specific knowledge into feature learning through anomaly maps, and (2) anomaly box guided detector pretraining, where pseudo-defect boxes derived from anomaly maps act as targets to guide detector training. Anomaly maps are generated using a knowledge enhanced anomaly detection method. Additionally, we present two small-scale, pixel-level labeled metallic surface defect datasets for validation. Extensive experiments demonstrate that AGSSP consistently enhances performance across various settings, achieving up to a 10\% improvement in mAP@0.5 and 11.4\% in mAP@0.5:0.95 compared to ImageNet-based models.
+            Pretrained models are commonly employed to improve finetuning performance in metallic surface defect detection, especially in data-scarce environments. However, models pretrained on ImageNet often underperform due to data distribution gaps and misaligned training objectives. To address this, we propose a novel method called Anomaly-Guided Self-Supervised Pretraining (AGSSP), which pretrains on a large industrial dataset containing 120,000 images. AGSSP adopts a two-stage framework: (1) anomaly map guided backbone pretraining, which integrates domain-specific knowledge into feature learning through anomaly maps, and (2) anomaly box guided detector pretraining, where pseudo-defect boxes derived from anomaly maps act as targets to guide detector training. Anomaly maps are generated using a knowledge enhanced anomaly detection method. Additionally, we present two small-scale, pixel-level labeled metallic surface defect datasets for validation. Extensive experiments demonstrate that AGSSP consistently enhances performance across various settings, achieving up to a 10% improvement in mAP@0.5 and 11.4% in mAP@0.5:0.95 compared to ImageNet-based models.
           </p>
         </div>
       </div>
@@ -175,7 +175,8 @@
           </p> -->
           <p>
             <strong style="font-weight: 900">Dataset composition.</strong>
-            Half of the dataset is aggregated from 20 publicly available industrial surface defect datasets, encompassing notable benchmarks such as DAGM 2007 \cite{dong2019pga}, Severstal \cite{severstal2019}, and NEU-DET \cite{he2019end}. The other half originates from real-world data collected from 14 steel plants and production lines, 
+            Half of the dataset is aggregated from 20 publicly available industrial surface defect datasets, encompassing notable benchmarks such as <a href="https://www.haqtu.me/">Haoqin Tu</a>DAGM 2007 \cite{dong2019pga}, Severstal \cite{severstal2019}, and NEU-DET \cite{he2019end}. 
+            The other half originates from real-world data collected from 14 steel plants and production lines, 
             encompassing a variety of metallic materials, including aluminum plates, steel sheets, steel strips, steel pipes, and steel rails, etc.
             The dataset includes 61 categories of objects categorized by material and data source, offering a comprehensive representation of diverse surface conditions and textures.
           </p>
