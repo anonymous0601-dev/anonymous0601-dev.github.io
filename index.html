@@ -175,11 +175,40 @@
           </p> -->
           <p>
             <strong style="font-weight: 900">Dataset composition.</strong>
-            Half of the dataset is aggregated from 20 publicly available industrial surface defect datasets, encompassing notable benchmarks such as <a href="https://www.haqtu.me/">Haoqin Tu</a>DAGM 2007 \cite{dong2019pga}, Severstal \cite{severstal2019}, and NEU-DET \cite{he2019end}. 
-            The other half originates from real-world data collected from 14 steel plants and production lines, 
-            encompassing a variety of metallic materials, including aluminum plates, steel sheets, steel strips, steel pipes, and steel rails, etc.
-            The dataset includes 61 categories of objects categorized by material and data source, offering a comprehensive representation of diverse surface conditions and textures.
+            Half of the dataset is aggregated from 20 publicly available industrial surface defect datasets, including 
+            <a href="https://www.kaggle.com/datasets/nexuswho/aitex-fabric-image-database/">AITEX</a>, 
+            <a href="https://tianchi.aliyun.com/dataset/148297/">APDDD</a>, 
+            <a href="https://publikationen.bibliothek.kit.edu/1000133819/">BSD Cls</a>, 
+            <a href="https://github.com/2Obe/BSData/">BSData</a>, 
+            <a href="https://www.kaggle.com/datasets/thtuan/btad-beantech-anomaly-detection/">BTAD</a>, 
+            <a href="https://hci.iwr.uni-heidelberg.de/content/weakly-supervised-learning-industrial-optical-inspection/">DAGM2007</a>, 
+            <a href="https://drive.google.com/drive/folders/10OyPzvI3H6llCZBxKxFlKWt1Pw1tkMK1 /">DTD-Synthetic</a>, 
+            <a href="https://github.com/VDT-2048/CPANet/">FSSD-12</a>, 
+            <a href="https://github.com/lvxiaoming2019/GC10-DET-Metallic-Surface-Defect-Datasets/">GC10-DET</a>, 
+            <a href="https://www.vicos.si/resources/kolektorsdd/">KolektorSDD</a>, 
+            <a href="https://www.vicos.si/resources/kolektorsdd2/">KolektorSDD2</a>, 
+            <a href="https://github.com/abin24/Magnetic-tile-defect-datasets./">Magnetic Tile</a>, 
+            <a href="https://github.com/stepanje/MPDD/">MPDD</a>, 
+            <a href="https://github.com/successhaha/GTnet/">MSD Seg</a>, 
+            <a href="https://www.mvtec.com/company/research/datasets/mvtec-ad/">MVTec_AD</a>, 
+            <a href="https://github.com/DHW-Master/NEU_Seg/">NEU Seg</a>, 
+            <a href="https://drive.google.com/drive/folders/1cplcUBmgHfD82YQTWnn1dssK2Z_xRpjx/">road_crack_dataset</a>, 
+            <a href="http://icn.bjtu.edu.cn/visint/resources/RSDDs.aspx/">RSDDs</a>, 
+            <a href="https://www.kaggle.com/competitions/severstal-steel-defect-detection/">severstal-steel-defect-detection</a>, 
+            <a href="https://github.com/VincentHancoder/SSGD/">SSGD</a>.
+            <!-- <br> -->
+
+            The dataset's remaining portion comprises proprietary metallic surface data collected from 14 steel plants and production lines, encompassing unlabeled samples of multiple metallic substrates including aluminum plates, steel sheets/strips, pipes, and rails. 
+            Each facility contributed unique data, characterized by material diversity, acquisition variance, process variability, and equipment profiles.
+            While confidentiality restrictions prevent the full disclosure of the dataset, we provide representative samples to showcase its diversity, and all the pre-trained weights are publicly available in our <a href="https://github.com/anonymous0601-dev/AGSSP/" target="_blank" rel="noopener">GitHub repository</a>.
+            
+            Our taxonomy further organizes the combined dataset (from 34 distinct sources) into 61 finely differentiated categories based on material classification and acquisition context.
+
           </p>
+          
+          <center><img class="center" src="./assets/p1.png" width="100%"></center>
+          <!-- <center><img class="center" src="./assets/p2.png" width="100%"></center> -->
+          
         </div>
       </div>
     </div>
@@ -196,97 +225,29 @@
         <thead>
           <tr>
             <th>Name</th>
-            <th>Data Type</th>
-            <th># Original</th>
-            <th># Pipeline</th>
-            <th># Final SFT</th>
-            <th># Final RL</th>
+            <th>Number of Images</th>
+            <th>Image Resolution</th>
+            <th>Defect Types</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><a href="https://huggingface.co/datasets/lmms-lab/LLaVA-OneVision-Data/tree/main/CLEVR-Math(MathV360K)">CLEVR_Math</a></td>
-            <td>Closed-end</td>
-            <td>35,000</td>
-            <td>28,018</td>
-            <td>5,923</td>
-            <td>2,000</td>
+            <td><a href="https://drive.google.com/file/d/1bNlp6_iMGSemdF1etWhYmnI7-GlNweWz/view?usp=drive_link">Casting Billet</a></td>
+            <td>1,060 (780 defective)</td>
+            <td>96×106 to 3,228×492</td>
+            <td>Scratch, Weld slag, Cutting opening, Water slag mark, Slag skin, Longitudinal crack</td>
           </tr>
           <tr>
-            <td><a href="https://huggingface.co/datasets/lmms-lab/LLaVA-OneVision-Data/tree/main/geo170k(qa)">GeoQA170K</a></td>
-            <td>Closed-end</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>6,499</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/datasets/Math-PUMA/Math-PUMA_Data_Stage2/tree/main/Synthesis">Math PUMA</a></td>
-            <td>Closed-end</td>
-            <td>30,000</td>
-            <td>26,672</td>
-            <td>19,258</td>
-            <td>6,696</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/datasets/MMInstruction/ArxivQA?row=0">ArxivQA</a></td>
-            <td>Closed-end</td>
-            <td>54,399</td>
-            <td>51,348</td>
-            <td>34,604</td>
-            <td>1,000</td>
-          </tr>
-          <tr>
-            <td><a href="https://www.docvqa.org/datasets">DocVQA</a></td>
-            <td>Closed-end</td>
-            <td>10,194</td>
-            <td>8,206</td>
-            <td>4,897</td>
-            <td>1,000</td>
-          </tr>
-          <tr>
-            <td><a href="https://vizwiz.org/tasks-and-datasets/vqa/">VizWiz</a></td>
-            <td>Closed-end</td>
-            <td>20,523</td>
-            <td>6,528</td>
-            <td>4,266</td>
-            <td>1,000</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/datasets/FreedomIntelligence/ALLaVA-4V/tree/main/allava_laion">ALLaVA-LAION</a></td>
-            <td>Open-end</td>
-            <td>47,066</td>
-            <td>18,123</td>
-            <td>10,496</td>
-            <td>3,000</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/datasets/Xkev/LLaVA-CoT-100k">LLaVA-CoT-COCO</a></td>
-            <td>Closed-end</td>
-            <td>3,000</td>
-            <td>3,000</td>
-            <td>8,727</td>
-            <td>2,000</td>
-          </tr>
-          <tr>
-            <td><a href="https://huggingface.co/datasets/Xkev/LLaVA-CoT-100k">LLaVA-CoT-VisualGenome</a></td>
-            <td>Closed-end</td>
-            <td>3,000</td>
-            <td>3,000</td>
-            <td>38,242</td>
-            <td>2,000</td>
-          </tr>
-          <tr>
-            <td><strong>Total</strong></td>
-            <td>Closed- &amp; Open-end</td>
-            <td>203,182</td>
-            <td>144,895</td>
-            <td>126,413</td>
-            <td>25,195</td>
+            <td><a href="https://drive.google.com/file/d/1nBL356q42ZRWYNa_QIYA25cz8kad7Ibd/view?usp=drive_link">Steel Pipe</a></td>
+            <td>1,227 (554 defective)</td>
+            <td>728×544</td>
+            <td>Warp, External fold, Wrinkle, Scratch</td>
           </tr>
         </tbody>
       </table>
     </div>
+
+    <center><img class="center" src="./assets/datasets.png" width="80%"></center>
     
     <!-- <p class="has-text-justified">
       <b>Dataset Statistics.</b> These datasets cover questions from different domains (math, general) and questions of different types (close-ended, open-ended). 
@@ -305,21 +266,57 @@
       <section class="section">
         <div class="container">
           <h2 class="title is-3 has-text-centered">Representative Examples & Anomaly Text Prompts</h2>
+          <p class="has-text-justified">
+            Here, we provide a detailed demonstration of the anomaly text prompt generation process for the casting billet and steel pipe datasets. 
+            Specifically, we began by selecting a representative sample for each type of defect. 
+            This sample was then input into GPT-4o, where the model was tasked with locating and describing the defect in the image, providing reference descriptions of the defect's characteristics. 
+            In parallel, we incorporated expert knowledge gathered from industrial fieldwork (including insights from field workers and relevant professional books) that outlined the common characteristics of such defects. 
+            These two sources of information complemented each other: the GPT-4o model provided textual expressions of defect features, 
+            while the expert knowledge helped fill in the gaps by offering a broader understanding of common characteristics that might not be fully captured by the representative samples in specific scenarios. 
+            The final text prompts were then crafted through human judgment. During the anomaly detection phase, all potential defect types and their associated features were input to assess the current object.
+
+            Moreover, for the private dataset used in pretraining, we have showcased some sample data and their corresponding text prompts. 
+            It is important to note that these datasets are fully unlabeled. 
+            
+          </p>
           <div class="tabs is-centered">
             <ul>
-              <li class="is-active" onclick="showTab(event, 'pdf-a')"><a>CLEVR-MATH</a></li>
-              <li onclick="showTab(event, 'pdf-b')"><a>GeoQA</a></li>
-              <li onclick="showTab(event, 'pdf-c')"><a>Synthesis</a></li>
-              <li onclick="showTab(event, 'pdf-d')"><a>ArxivQA</a></li>
-              <li onclick="showTab(event, 'pdf-e')"><a>ALLaVA-LAION</a></li>
+              <li class="is-active" onclick="showTab(event, 'pdf-a')"><a>Casting Billet</a></li>
+              <li onclick="showTab(event, 'pdf-b')"><a>Steel Pipe</a></li>
+              <li onclick="showTab(event, 'pdf-c')"><a>aluminum_plate</a></li>
+              <li onclick="showTab(event, 'pdf-d')"><a>aluminum_ingot</a></li>
+              <li onclick="showTab(event, 'pdf-e')"><a>aluminum_strip</a></li>
+              <li onclick="showTab(event, 'pdf-1')"><a>steel_plate</a></li>
+              <li onclick="showTab(event, 'pdf-2')"><a>cold_rolled_strip_steel</a></li>
+              <li onclick="showTab(event, 'pdf-3')"><a>hot_rolled_strip_annealing_picking</a></li>
+              <li onclick="showTab(event, 'pdf-4')"><a>hot_rolled_strip_steel</a></li>
+              <li onclick="showTab(event, 'pdf-5')"><a>medium_heavy_plate</a></li>
+              <li onclick="showTab(event, 'pdf-6')"><a>moderately_thick_plates</a></li>
+              <li onclick="showTab(event, 'pdf-7')"><a>steel_plate2</a></li>
+              <li onclick="showTab(event, 'pdf-8')"><a>pipeData</a></li>
+              <li onclick="showTab(event, 'pdf-9')"><a>steel_rail</a></li>
+              <li onclick="showTab(event, 'pdf-10')"><a>wide_thick_plate</a></li>
+              <li onclick="showTab(event, 'pdf-11')"><a>medium_plate</a></li>
             </ul>
           </div>
           <div class="content has-text-centered">
-            <img id="pdf-a" class="pdf-preview" src="./assets/examples/vl-thinking3.png" width="60%">
-            <img id="pdf-b" class="pdf-preview is-hidden" src="./assets/examples/vl-thinking1.png" width="60%">
-            <img id="pdf-c" class="pdf-preview is-hidden" src="./assets/examples/vl-thinking2.png" width="60%">
-            <img id="pdf-d" class="pdf-preview is-hidden" src="./assets/examples/vl-thinking4.png" width="60%">
-            <img id="pdf-e" class="pdf-preview is-hidden" src="./assets/examples/vl-thinking5.png" width="60%">
+            <img id="pdf-a" class="pdf-preview" src="./assets/d1.png" width="100%">
+            <img id="pdf-b" class="pdf-preview is-hidden" src="./assets/d2.png" width="80%">
+            <img id="pdf-c" class="pdf-preview is-hidden" src="./assets/d3.png" width="100%">
+            <img id="pdf-d" class="pdf-preview is-hidden" src="./assets/d4.png" width="100%">
+            <img id="pdf-e" class="pdf-preview is-hidden" src="./assets/d5.png" width="100%">
+            <img id="pdf-1" class="pdf-preview is-hidden" src="./assets/d6.png" width="100%">
+            <img id="pdf-2" class="pdf-preview is-hidden" src="./assets/d7.png" width="100%">
+            <img id="pdf-3" class="pdf-preview is-hidden" src="./assets/d8.png" width="100%">
+            <img id="pdf-4" class="pdf-preview is-hidden" src="./assets/d9.png" width="100%">
+            <img id="pdf-5" class="pdf-preview is-hidden" src="./assets/d10.png" width="100%">
+            <img id="pdf-6" class="pdf-preview is-hidden" src="./assets/d11.png" width="100%">
+            <img id="pdf-7" class="pdf-preview is-hidden" src="./assets/d12.png" width="100%">
+            <img id="pdf-8" class="pdf-preview is-hidden" src="./assets/d13.png" width="100%">
+            <img id="pdf-9" class="pdf-preview is-hidden" src="./assets/d14.png" width="100%">
+            <img id="pdf-10" class="pdf-preview is-hidden" src="./assets/d15.png" width="100%">
+            <img id="pdf-11" class="pdf-preview is-hidden" src="./assets/d16.png" width="100%">
+
           </div>
         </div>
       </section>
@@ -357,86 +354,22 @@
             </section> -->
 
 
-
-<!-- Teaser. -->
 <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">⚔️ SFT vs RL for Reasoning</h2>
-        
-        <h3 class="title is-3 has-text-left" style="font-size: 1.5rem; margin-top: 50px;;">Pseudo vs Native Reasoning</h3>
+        <h2 class="title is-3">Anomaly-Guided Self-Supervised Pretraining (AGSSP)</h2>
 
+
+        <h3 class="title is-3 has-text-left" style="font-size: 1.5rem; margin-top: 50px;">Overview of the proposed framework</h3>
         <div class="content has-text-justified">
-          <center><img class="center" src="./assets/teaser-vl-reasoner-v2.png" width="100%"></center>
-          <!-- <p>
-            <strong style="font-weight: 900">Pipeline Overview.</strong>
-            We propose a four-step procedure for data generation: <b>Captioning</b>, <b>Visual-Language CoT Generation</b>, <b>Answer Rewriting</b> and <b>Answer Verification</b>.         
-           </p> -->
-           <p>
-            <strong style="font-weight: 900">Examples from LVLMs trained with different strategies for reasoning.</strong>
-           </p>
-           <p>
-            <strong>Left</strong>: response from a model trained with SFT, showing 
-            <em>pseudo reasoning traces</em> and a number of <em>pseudo self-reflective cues</em> (i.e., aha-moments) imitated from R1.
-          </p>
+          <center><img class="center" src="./assets/main.png" width="100%"></center>
           <p>
-            <strong>Right</strong>: response from a model trained with RL (GRPO), showing 
-            <em>native reasoning ability</em> and <em>authentic aha-moments</em> emerged from RL training.
-          </p>
-          <p>
-            <span style="color: red;">Wrong reasoning steps</span> are colored red and 
-            <span style="background-color: yellow;">aha-moments</span> are highlighted.
-          </p>
-        </div>
-
-
-        <h3 class="title is-3 has-text-left" style="font-size: 1.5rem; margin-top: 60px;">SFT Performance</h3>
-
-        <div class="content has-text-justified">
-          <center><img class="center" src="./assets/sft_only.png" width="100%"></center>
-           <p>
-            <strong style="font-weight: 900">Delta percentage performance change</strong>
-            of different models trained with supervised fine-tuning (SFT) only. 
-           </p>
-
-        </div>
-        
-        <h3 class="title is-3 has-text-left" style="font-size: 1.5rem; margin-top: 60px;">SFT+GRPO vs GRPO Performance</h3>
-
-        <div class="content has-text-justified">
-          <center><img class="center" src="./assets/grpo_with_sft.png" width="100%"></center>
-          <!-- <p>
-            <strong style="font-weight: 900">Pipeline Overview.</strong>
-            We propose a four-step procedure for data generation: <b>Captioning</b>, <b>Visual-Language CoT Generation</b>, <b>Answer Rewriting</b> and <b>Answer Verification</b>.         
-           </p> -->
-           <p>
-            <strong style="font-weight: 900">Impact of SFT with 5K and 10K samples before GRPO.</strong>
-            SFT jeopardizes GRPO performance.
-           </p>
-        </div>
-
-
-
-      </div>
-    </div>
-  </section>
-<!-- / Teaser. -->
-
-
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">💡 GRPO with Mixed Reward</h2>
-
-
-        <h3 class="title is-3 has-text-left" style="font-size: 1.5rem; margin-top: 50px;">Mixed Reward Module</h3>
-        <div class="content has-text-justified">
-          <center><img class="center" src="./assets/mixed_reward.png" width="100%"></center>
-          <p>
-            <strong style="font-weight: 900">Mixed reward module.</strong>
-            The proposed framework comprises 2 reward formats (rule-based and open-ended) and 5 types of verifiable rewards (digit, MCQ, math, IoU and general reasoning).         
+            This framework is composed of two key phases: anomaly map guided backbone pretraining (b) and anomaly box guided detector pretraining 
+            (c). Using the Knowledge Enhanced Anomaly Detection algorithm (a), which incorporates detailed defect descriptions as prior knowledge, anomaly maps are generated. 
+            In the backbone pretraining phase, anomaly map information is transferred into the network via distillation loss. This process can be seamlessly combined with existing pretraining tasks. 
+            During the detector pretraining phase, the pretrained backbone is kept frozen, while the anomaly maps are used to generate pseudo-defect boxes. 
+            These pseudo-boxes are used for detector component pretraining within the object detection model.
           </p>
         </div>
 
@@ -444,14 +377,13 @@
         </style>
         <h3 class="title is-3 has-text-left" style="font-size: 1.5rem; margin-top: 50px;;">Performance</h3>
         <div class="content has-text-justified">
-          <center><img class="center" src="./assets/main_results.png" width="100%"></center>
+          <center><img class="center" src="./assets/results.png" width="100%"></center>
           <!-- <p>
             <strong style="font-weight: 900">Pipeline Overview.</strong>
             We propose a four-step procedure for data generation: <b>Captioning</b>, <b>Visual-Language CoT Generation</b>, <b>Answer Rewriting</b> and <b>Answer Verification</b>.          
           </p> -->
           <p>
-            <strong style="font-weight: 900">Benchmark performance.</strong>
-            Evaluation on 6 math reasoning benchmarks held by <a href="https://huggingface.co/spaces/opencompass/Open_LMM_Reasoning_Leaderboard">Open LMM Reasoning Leaderboard</a>. VLAA-Thinker models significantly outperform baselines and other models.
+            Experimental results across four downstream datasets demonstrate that AGSSP's pretraining framework—compatible with multiple backbone architectures, detection methods, and pretraining approaches—consistently outperforms baseline models pretrained on ImageNet and COCO.
           </p>
         </div>
 
@@ -471,21 +403,21 @@
   </div>
 </section> -->
 
-<section class="section" id="BibTeX">
+<!--<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-<!-- @misc{vl-thinking2025,
+ @misc{vl-thinking2025,
     title={VL-Thinking: An R1-Derived Visual Instruction Tuning Dataset for Thinkable LVLMs},
     author={Hardy Chen and Haoqin Tu and Hui Liu and Xianfeng Tang and Xinya Du and Yuyin Zhou and Cihang Xie},
     year = {2025},
     publisher = {GitHub},
     journal = {GitHub repository},
     howpublished = {\url{https://github.com/UCSC-VLAA/VL-Thinking}},
-    } -->
+    } 
     </code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
@@ -494,7 +426,7 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            Based on the following <a href="http://nerfies.github.io">template</a>.
+            Based on the following <a href="https://ucsc-vlaa.github.io/VLAA-Thinking/">template</a>.
           </p>
         </div>
       </div>
